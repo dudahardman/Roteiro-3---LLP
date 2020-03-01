@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1582936498 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\main.cpp
+	"ContaEspecial.h"
+	"ContaCorrente.h"
+	"Conta.h"
+	"Poupanca.h"
+	<iostream>
+
+1582934906 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\include\contaespecial.h
+	"ContaCorrente.h"
+	"Conta.h"
+	<iostream>
+
+1582935823 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\include\contacorrente.h
+	"Conta.h"
+	<iostream>
+
+1582935316 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\include\conta.h
+	<iostream>
+
+1582934906 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\include\poupanca.h
+	"Conta.h"
+	<iostream>
+
+1582934906 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\src\conta.cpp
+	"Conta.h"
+	<iostream>
+
+1582936124 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\src\contacorrente.cpp
+	"ContaCorrente.h"
+	"Conta.h"
+	<iostream>
+
+1582934906 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\src\contaespecial.cpp
+	"ContaEspecial.h"
+	"ContaCorrente.h"
+	"Conta.h"
+	<iostream>
+
+1582934919 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 3\src\poupanca.cpp
+	"Poupanca.h"
+	"Conta.h"
+	<iostream>
+

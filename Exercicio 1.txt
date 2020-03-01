@@ -1,0 +1,18 @@
+POLIMORFISMO -> variável de referência(ponteiro) do tipo mãe(superclasse) aponta pra objeto tipo filho(classe que herda).
+
+
+class Funcionario
+{
+    public:
+        Funcionario(string n, int ma);
+        virtual double calculaSalario()=0;
+};
+
+class Horista : public Funcionario
+{
+    public:
+        Horista(string n, int ma, double salH, double ht);
+        double calculaSalario();
+};
+
+Funcionario *func1 = new Horista("Joao", 48, 30, 40);

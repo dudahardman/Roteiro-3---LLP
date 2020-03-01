@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1583090259 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\main.cpp
+	"Assalariado.h"
+	"Horista.h"
+	"Comissionado.h"
+	"Funcionario.h"
+	"SistemaGerenciaFolha.h"
+	"OrcamentoEstouradoException.h"
+	<iostream>
+	<vector>
+
+1582942989 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\src\funcionario.cpp
+	"Funcionario.h"
+	<iostream>
+
+1582942989 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\funcionario.h
+	<iostream>
+
+1582940510 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\src\assalariado.cpp
+	"Assalariado.h"
+	"Funcionario.h"
+	<iostream>
+
+1582940510 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\assalariado.h
+	"Funcionario.h"
+	<iostream>
+
+1582992303 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\src\comissionado.cpp
+	"Comissionado.h"
+	"Funcionario.h"
+	<iostream>
+
+1582940527 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\comissionado.h
+	"Funcionario.h"
+	<iostream>
+
+1582940510 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\src\horista.cpp
+	"Horista.h"
+	"Funcionario.h"
+	<iostream>
+
+1582940545 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\horista.h
+	"Funcionario.h"
+	<iostream>
+
+1583090219 source:c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\src\sistemagerenciafolha.cpp
+	"SistemaGerenciaFolha.h"
+	"Assalariado.h"
+	"Horista.h"
+	"Comissionado.h"
+	"Funcionario.h"
+	"OrcamentoEstouradoException.h"
+	"FuncionarioNaoExisteException.h"
+	<iostream>
+	<vector>
+	<exception>
+
+1582992898 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\sistemagerenciafolha.h
+	"Assalariado.h"
+	"Horista.h"
+	"Comissionado.h"
+	"Funcionario.h"
+	<iostream>
+	<vector>
+
+1583088186 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\orcamentoestouradoexception.h
+	<iostream>
+	<exception>
+
+1583090299 c:\users\duda\desktop\p2 ec duda\llp\roteiro 3\exercicio 4\include\funcionarionaoexisteexception.h
+	<iostream>
+	<exception>
+
