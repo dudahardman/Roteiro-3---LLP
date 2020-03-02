@@ -20,13 +20,35 @@ int main()
     sistema->setFuncionarios(new Horista("Maria", 25, 30, 40));
     sistema->setFuncionarios(new Comissionado("Jose", 56, 3000, 40, 0.50));
 
-    cout << "Salario: " << sistema->consultaSalarioFuncionario("Jose") << endl;
-    cout << "Salario: " << sistema->consultaSalarioFuncionario("Joao") << endl;
-    cout << "Salario: " << sistema->consultaSalarioFuncionario("Maria") << endl;
+    try{
+        cout << "Total da folha de pagamentos = " << sistema->calculaTotalFolha() << endl;
+    }catch(exception& o){
+        cout << o.what() << endl;
+    }
 
-    cout << "Total da folha de pagamentos = " << sistema->calculaTotalFolha() << endl;
+    try{
+        cout << "Salario: " << sistema->consultaSalarioFuncionario("duda") << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
 
-    cout << "Salario: " << sistema->consultaSalarioFuncionario("duda") << endl;
+    try{
+        cout << "Salario: " << sistema->consultaSalarioFuncionario("Jose") << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
+
+    try{
+        cout << "Salario: " << sistema->consultaSalarioFuncionario("Joao") << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
+
+    try{
+        cout << "Salario: " << sistema->consultaSalarioFuncionario("Maria") << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
 
     return 0;
 }

@@ -32,15 +32,10 @@ double SistemaGerenciaFolha::consultaSalarioFuncionario(string nome){
         }
     }
 
-    try{
         if(encontrou == 0){
             throw f;
         }else{
-            return salario;
-        }
-    }catch(exception& f){
-        cout << f.what() << endl;
-    }
+            return salario;}
 
 
 }
@@ -51,13 +46,9 @@ double SistemaGerenciaFolha::calculaTotalFolha(){
         total += funcionarios[i]->calculaSalario();
     }
     OrcamentoEstouradoException o;
-    try{
         if(total > orcamentoMax){
             throw o;
         }
-    }catch(exception& o){
-        cout << o.what() << endl;
-    }
     return total;
 
 }
