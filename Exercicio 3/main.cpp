@@ -1,51 +1,58 @@
-#include "ContaEspecial.h"
-#include "ContaCorrente.h"
-#include "Conta.h"
-#include "Poupanca.h"
+#include "Assalariado.h"
+#include "Horista.h"
+#include "Comissionado.h"
+#include "Funcionario.h"
+#include "SistemaGerenciaFolha.h"
+#include "OrcamentoEstouradoException.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    ContaCorrente *conta1 = new ContaCorrente("joao", 48, 900.0);
-    ContaCorrente *conta2 = new ContaEspecial("maria", 23, 300.0);
-    Poupanca *conta3 = new Poupanca("jose", 65, 480.0);
+    double orcmax = 0.0;
+    cout << "Digite o orcamento maximo: ";
+    cin >> orcmax;
+    SistemaGerenciaFolha *sistema = new SistemaGerenciaFolha(orcmax);
 
-    cout << "\t\tConta 1:" << endl;
-    cout << "Nome: " << conta1->getNomeCliente() << endl;
-    cout << "Numero: " << conta1->getNumero() << endl;
-    cout << "Saldo: " << conta1->getSaldo() << endl;
-    conta1->sacar(900);
-    cout << "Saldo pos saque: " << conta1->getSaldo() << endl;
-    conta1->setSalario(4000.0);
-    cout << "Salario: " << conta1->getSalario() << endl;
-    conta1->definirLimite();
-    cout << "Limite: " << conta1->getLimite() << endl;
+    sistema->setFuncionarios(new Assalariado("Joao", 48, 1000));
+    sistema->setFuncionarios(new Horista("Maria", 25, 30, 40));
+    sistema->setFuncionarios(new Comissionado("Jose", 56, 3000, 40, 0.50));
 
+    try{
+        double aux = sistema->calculaTotalFolha();
+        cout << "Total da folha de pagamentos = " << aux << endl;
+    }catch(exception& o){
+        cout << o.what() << endl;
+    }
 
-    conta2->setSalario(4000.0);
-    conta2->definirLimite();
-    cout << "\n\t\tConta 2:" << endl;
-    cout << "Nome: " << conta2->getNomeCliente() << endl;
-    cout << "Numero: " << conta2->getNumero() << endl;
-    cout << "Saldo: " << conta2->getSaldo() << endl;
-    cout << "Salario: " << conta2->getSalario() << endl;
-    cout << "Limite: " << conta2->getLimite() << endl;
-    conta2->sacar(900);
-    conta2->depositar(1200.0);
-    cout << "Saldo pos deposito: " << conta2->getSaldo() << endl;
-    conta2->sacar(900);
-    cout << "Saldo pos saque: " << conta2->getSaldo() << endl;
+    try{
+        double aux2 = sistema->consultaSalarioFuncionario("duda");
+        cout << "Salario: " << aux2 << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
 
-    cout << "\n\t\tConta 3:" << endl;
-    cout << "Nome: " << conta3->getNomeCliente() << endl;
-    cout << "Numero: " << conta3->getNumero() << endl;
-    cout << "Saldo: " << conta3->getSaldo() << endl;
-    conta3->setTaxaRend(1.1);
-    conta3->setVariacao(51);
-    cout << "Rendimento: " << conta3->render() << endl;
+    try{
+        double aux2 = sistema->consultaSalarioFuncionario("Jose");
+        cout << "Salario: " << aux2 << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
 
+    try{
+        double aux2 = sistema->consultaSalarioFuncionario("Joao");
+        cout << "Salario: " << aux2 << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
+
+    try{
+        double aux2 = sistema->consultaSalarioFuncionario("Maria");
+        cout << "Salario: " << aux2 << endl;
+    }catch(exception& f){
+        cout << f.what() << endl;
+    }
 
     return 0;
 }
